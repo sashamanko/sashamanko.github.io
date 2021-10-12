@@ -85,8 +85,8 @@ a {
 }
 
 .burger-btn {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     margin-left: auto;
     background: transparent;
     border: none;
@@ -113,11 +113,11 @@ a {
 }
 
 .burger-btn span::before {
-    top: -6px;
+    top: -10px;
 }
 
 .burger-btn span::after {
-    bottom: -6px;
+    bottom: -10px;
 }
 
 
@@ -208,7 +208,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* 1 */
 
-.greeting {}
+
+/* .greeting {} */
 
 .greeting__container {
     border-top: 1px solid #e8e8e8;
@@ -671,7 +672,7 @@ input[type=number]::-webkit-outer-spin-button {
     /* global
     ──────────────────────────────────────────────────────────── */
     body {
-        font-size: 12px;
+        font-size: 16px;
     }
     .burger-btn {
         display: block;
@@ -679,6 +680,7 @@ input[type=number]::-webkit-outer-spin-button {
     /* header
     ──────────────────────────────────────────────────────────── */
     .header__container__navbar__logo {
+        font-size: 24px;
         margin-left: 0;
     }
     .header__container__navbar__nav-list,
@@ -693,6 +695,9 @@ input[type=number]::-webkit-outer-spin-button {
     .greeting__container__des,
     .greeting__container__img {
         width: 100%;
+    }
+    .greeting__container__img {
+        object-position: bottom;
     }
     .greeting__container__des {
         padding: 25px 20px;
