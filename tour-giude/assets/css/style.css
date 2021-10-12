@@ -85,6 +85,7 @@ a {
 }
 
 .burger-btn {
+    position: relative;
     width: 30px;
     height: 30px;
     margin-left: auto;
@@ -95,29 +96,48 @@ a {
 
 .burger-btn span {
     position: relative;
-    display: flex;
+    display: block;
     width: 100%;
     height: 3px;
     background: #000;
-    border: none;
+    transition: .3s, background-color .3s .3s;
 }
 
 .burger-btn span::before,
 .burger-btn span::after {
     content: '';
     position: absolute;
-    width: 100%;
+    display: block;
+    width: inherit;
     height: inherit;
     background: #000;
     border: none;
+    transition: top .3s .3s, transform .3s;
 }
 
 .burger-btn span::before {
-    top: -10px;
+    top: -8px;
 }
 
 .burger-btn span::after {
-    bottom: -10px;
+    top: 8px;
+}
+
+.burger-btn.active span {
+    background: transparent;
+    transition: .3s;
+}
+
+.burger-btn.active span::before {
+    top: 0;
+    transform: rotate(-45deg);
+    transition: top .3s, transform .3s .3s;
+}
+
+.burger-btn.active span::after {
+    top: 0;
+    transform: rotate(45deg);
+    transition: top .3s, transform .3s .3s;
 }
 
 
@@ -138,8 +158,7 @@ input[type=number]::-webkit-outer-spin-button {
 /* header
     ──────────────────────────────────────────────────────────── */
 
-
-/* .header {} */
+.header {}
 
 .header__container {
     width: 100%;
@@ -674,16 +693,49 @@ input[type=number]::-webkit-outer-spin-button {
     body {
         font-size: 16px;
     }
+    .title {
+        font-size: 34px;
+    }
     .burger-btn {
         display: block;
+        z-index: 3;
     }
     /* header
     ──────────────────────────────────────────────────────────── */
+    .header__container {
+        position: relative;
+        z-index: 3;
+    }
     .header__container__navbar__logo {
         font-size: 24px;
         margin-left: 0;
+        z-index: 4;
     }
-    .header__container__navbar__nav-list,
+    .header__container__navbar__nav-list {
+        position: absolute;
+        flex-direction: column;
+        top: -400%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 2;
+        transition: .3s;
+    }
+    .header__container__navbar__nav-list.active {
+        top: 100%;
+    }
+    .header__container__navbar__nav-list__item {
+        padding: 15px 0;
+        text-align: center;
+    }
+    .header__container__navbar__nav-list__item__link {
+        padding: 15px 150px;
+        text-align: center;
+    }
+    .header__container__navbar__nav-list__item:nth-child(1n+1) {
+        border-top: 2px solid #e8e8e8;
+        margin-right: 0;
+    }
     .header__container__navbar__social-list {
         display: none;
     }
@@ -703,7 +755,10 @@ input[type=number]::-webkit-outer-spin-button {
         padding: 25px 20px;
     }
     .greeting__container__des__title {
-        font-size: 28px;
+        font-size: 36px;
+    }
+    .greeting__container__des__des1 {
+        font-weight: 400;
     }
     .story {
         flex-direction: column;
@@ -739,10 +794,6 @@ input[type=number]::-webkit-outer-spin-button {
     }
     .gallery__slider__item__des__btn {
         font-size: 18px;
-    }
-    .features__container__features__item:nth-child(1n+1) {
-        border-right: none;
-        border-bottom: 2px solid #e8e8e8;
     }
     .writeToUs__form {
         width: 90%;
