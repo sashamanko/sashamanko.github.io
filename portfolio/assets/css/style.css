@@ -10,6 +10,7 @@ p {
 .cards {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -27,13 +28,15 @@ p {
 
 .card__preview {
     width: 100%;
-    height: 85%;
+    height: 90%;
     overflow: hidden;
 }
 
 .card__preview>img {
     width: 100%;
+    min-height: 100%;
     object-fit: cover;
+    object-position: left;
 }
 
 .card__description {
