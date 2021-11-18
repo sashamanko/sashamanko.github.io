@@ -1,0 +1,50 @@
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+main>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    perspective: 1000px;
+    transform: rotateX(50deg) rotateY(15deg) rotateZ(315deg) translate(-42%, -225%);
+}
+
+.line {
+    display: flex;
+    width: fit-content;
+    animation: animate 35s linear infinite;
+    transition-delay: -35s;
+}
+
+.line:nth-child(even) {
+    animation: animate2 35s linear infinite;
+    transition-delay: -35s;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.card {
+    min-width: 60px;
+    min-height: 60px;
+    margin: 4px 5px;
+    background: #000;
+    border-radius: 10px;
+}
