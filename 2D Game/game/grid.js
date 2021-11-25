@@ -2,6 +2,7 @@ export class Grid {
     constructor(ctx) {
         this.ctx = ctx;
     }
+
     draw() {
         for (let x = 0; x <= 1200; x += 64) {
             this.ctx.fillRect(x, 0, 1, 700);

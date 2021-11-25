@@ -25,7 +25,7 @@ export class RenderHTML {
         document.body.prepend(gameContainer);
     }
 
-    RenderCanvas(width, height) {
+    RenderCanvas(width = window.innerWidth, height = window.innerHeight) {
         this.width = width;
         this.height = height;
 

@@ -3,27 +3,35 @@ import { Grid } from "./grid.js";
 import { config } from './config.js'
 import './events.js'
 
-
-
 export class GameCore {
     _HTML = new RenderHTML();
 
+    getCtx() {
+        return this._HTML._ctx;
+    }
+
     _RenderHTML() {
         this._HTML.LinkCSS();
+        this._HTML.RenderCanvas();
     }
 
     _Engine() {
         window.addEventListener('keypress', (e) => {
             if (config.gridState) {
-                let grid = new Grid(this._HTML._ctx);
+                let grid = new Grid(this.getCtx());
                 grid.draw()
 
             } else if (!config.gridState) {
-                this._HTML._ctx.clearRect(0, 0, this._HTML._canvas.width, this._HTML._canvas.height);
+                this.getCtx().clearRect(0, 0, this._HTML._canvas.width, this._HTML._canvas.height);
             }
 
         })
 
+    }
+
+    init() {
+        this._RenderHTML()
+        this._GameLoop();
     }
 
     _GameLoop() {
@@ -31,8 +39,4 @@ export class GameCore {
         requestAnimationFrame(() => this._GameLoop());
     }
 
-    init() {
-        this._RenderHTML()
-        this._GameLoop();
-    }
 };
