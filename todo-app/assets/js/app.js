@@ -25,15 +25,6 @@ input_btn.addEventListener('click', () => {
     for (let key of propsArray) {
         key.pushProps()
     }
-
-    propsItem = document.querySelectorAll('.props-list__item');
-
-    propsItem.forEach(elem => {
-        elem.addEventListener('click', (e) => {
-            propsMenu.classList.add('active');
-
-        })
-    })
 })
 
 
@@ -48,6 +39,10 @@ class Props {
 
         propsBody.classList.add('props-list__item');
         propsTitle.classList.add('props-list__item__title');
+
+        propsBody.addEventListener('click', () => {
+            propsMenu.classList.add('active');
+        })
 
         propsTitle.innerText = this.title;
 
