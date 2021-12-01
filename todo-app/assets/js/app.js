@@ -1,8 +1,9 @@
 const input = document.querySelector('.input-block__input'),
     input_btn = document.querySelector('.input-block__btn'),
     propsList = document.querySelector('.props-list'),
-    propsItem = document.querySelectorAll('.props-list__item'),
     propsMenu = document.querySelector('.props-menu');
+
+let propsItem = document.querySelectorAll('.props-list__item');
 
 const propsArray = []
 
@@ -14,21 +15,27 @@ input.addEventListener('input', () => {
     }
 })
 
-propsItem.forEach(elem => {
-    elem.addEventListener('click', (e) => {
-        propsMenu.classList.add('active');
-
-    })
-})
-
 input_btn.addEventListener('click', () => {
     const props = new Props(input.value);
     propsArray.push(props);
-    props.pushProps();
     input.value = '';
     input_btn.classList.remove('d-flex');
 
+    propsList.innerHTML = ''
+    for (let key of propsArray) {
+        key.pushProps()
+    }
+
+    propsItem = document.querySelectorAll('.props-list__item');
+
+    propsItem.forEach(elem => {
+        elem.addEventListener('click', (e) => {
+            propsMenu.classList.add('active');
+
+        })
+    })
 })
+
 
 class Props {
     constructor(title) {
