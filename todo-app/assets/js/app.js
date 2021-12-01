@@ -1,11 +1,11 @@
+import { Props } from "./props.js";
+
 const input = document.querySelector('.input-block__input'),
     input_btn = document.querySelector('.input-block__btn'),
     propsList = document.querySelector('.props-list'),
     propsMenu = document.querySelector('.props-menu');
 
-let propsItem = document.querySelectorAll('.props-list__item');
-
-const propsArray = []
+const propsArray = [];
 
 input.addEventListener('input', () => {
     if (input.value.length !== 0 && filter(input.value)) {
@@ -23,34 +23,16 @@ input_btn.addEventListener('click', () => {
 
     propsList.innerHTML = ''
     for (let key of propsArray) {
-        key.pushProps()
-    }
-})
-
-
-class Props {
-    constructor(title) {
-        this.title = title;
+        key.pushProps(propsList)
     }
 
-    pushProps() {
-        const propsBody = document.createElement('div'),
-            propsTitle = document.createElement('h2');
-
-        propsBody.classList.add('props-list__item');
-        propsTitle.classList.add('props-list__item__title');
-
-        propsBody.addEventListener('click', () => {
-            propsMenu.classList.add('active');
+    const propsItem = document.querySelectorAll('.props-list__item');
+    propsItem.forEach(elem => {
+        elem.addEventListener('click', () => {
+            renderPropsMenu(elem.querySelector('.props-list__item__title').innerText)
         })
-
-        propsTitle.innerText = this.title;
-
-        propsBody.append(propsTitle);
-
-        propsList.prepend(propsBody);
-    }
-}
+    })
+})
 
 function filter(text) {
     if (text.trim().length == 0) {
@@ -58,4 +40,11 @@ function filter(text) {
     } else {
         return true;
     }
+}
+
+function renderPropsMenu(title) {
+    propsMenu.classList.add('active');
+
+    const propsMenuTitle = document.querySelector('.props-menu__title');
+    propsMenuTitle.innerHTML = title;
 }
