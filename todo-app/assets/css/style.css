@@ -9,9 +9,13 @@
 }
 
 body {
+    display: flex;
     width: 100%;
     min-height: 100vh;
     background: #202020;
+    color: #d1d1d1;
+    font-family: sans-serif;
+    overflow: hidden;
 }
 
 button {
@@ -20,9 +24,10 @@ button {
 }
 
 .container {
-    width: 75%;
+    max-width: 1400px;
+    width: 1400px;
     margin: 0 auto;
-    padding: 15px 0;
+    padding: 15px;
 }
 
 .d-flex {
@@ -31,8 +36,11 @@ button {
 
 .todo-page {
     display: flex;
-    flex-direction: column;
     height: 100%;
+}
+
+.props {
+    width: 100%;
 }
 
 .input-block {
@@ -92,4 +100,46 @@ button {
 
 .input-block__btn:hover::after {
     transform: rotate(270deg);
+}
+
+.props-list {
+    width: 100%;
+    flex-direction: column;
+}
+
+.props-list__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 97%;
+    height: 45px;
+    margin: 15px auto 0 auto;
+    padding: 0 15px;
+    box-shadow: 0 0 5px 0 #000;
+    border-radius: 1000px;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.props-list__item__title {
+    width: 100%;
+    background: #202020;
+    border-radius: 1000px;
+    z-index: 1;
+}
+
+.props-list__item:hover {
+    transform: scale(1.03);
+}
+
+.props-menu {
+    display: flex;
+    width: 0px;
+    background: #202020;
+    box-shadow: 0 0 5px 0 #000;
+    transition: all .3s;
+}
+
+.props-menu.active {
+    width: 450px;
 }
