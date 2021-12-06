@@ -1,0 +1,33 @@
+.scrollbar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 16px;
+    transition: all .3s;
+}
+
+.scrollbar-line {
+    display: flex;
+    width: 100%;
+    height: 2px;
+    background: #4d4d4d;
+    transition: all .3s;
+}
+
+.scrollbar-point {
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: #4d4d4d;
+    border: 2px solid #4d4d4d;
+    border-radius: 10px;
+    transition: all .3s;
+}
+
+.scrollbar:hover .scrollbar-point {
+    background: #4f11ba;
+}

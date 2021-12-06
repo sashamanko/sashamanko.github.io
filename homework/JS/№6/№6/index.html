@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        html {
+            background: #202020;
+            color: #fff;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        button {
+            display: block;
+            align-self: flex-start;
+            margin: 0 100px;
+        }
+        
+        button:nth-child(2) {
+            margin-top: 100px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="./tooltip.css">
+</head>
+
+<body>
+    <div>
+        <button class="js--tooltip" data-tooltip-text="Tooltip 1">tooltip 1</button>
+        <button class="js--tooltip" data-tooltip-text="Tooltip 2">tooltip 2</button>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

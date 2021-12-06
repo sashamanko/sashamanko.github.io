@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+            background: #202020;
+            color: #fff;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            min-width: 100%;
+            min-height: 100vh;
+            font-family: cursive, sans-serif;
+        }
+        
+        .lamp-block {
+            background: #202020;
+            border-radius: 10px;
+            box-shadow: 0 0 5px 0 #000;
+            padding: 10px 0;
+        }
+        
+        .lamp {
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+            border-radius: 1000px;
+        }
+        
+        .bg-red {
+            background: red;
+        }
+        
+        .bg-yellow {
+            background: yellow;
+        }
+        
+        .bg-green {
+            background: green;
+        }
+        
+        .disable {
+            background: #d1d1d1;
+        }
+        
+        .next-btn {
+            width: 100%;
+            margin-top: 15px;
+            padding: 7px 10px;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: inherit;
+            font-weight: 600;
+            letter-spacing: 2px;
+            border: 2px solid #787878;
+            border-radius: 1000px;
+            background: transparent;
+            outline: none;
+            transition: all .3s;
+        }
+        
+        .next-btn:hover {
+            border-color: #4f11ba;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="traffic-lights">
+        <div class="lamp-block">
+            <div class="lamp bg-red js--lamp"></div>
+            <div class="lamp bg-yellow disable js--lamp"></div>
+            <div class="lamp bg-green disable js--lamp"></div>
+        </div>
+        <button class="next-btn js--next-btn">next</button>
+    </div>
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

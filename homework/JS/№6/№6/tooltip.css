@@ -1,0 +1,33 @@
+.js--tooltip-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #4f11ba;
+    opacity: 0;
+    z-index: 1000000;
+}
+
+.js--tooltip-box.top::before,
+.js--tooltip-box.bottom::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: inherit;
+    transition: all .3s;
+    transform: rotate(45deg);
+}
+
+.js--tooltip-box.top::before {
+    top: -8px;
+    left: calc(50% - 8px);
+}
+
+.js--tooltip-box.bottom::before {
+    bottom: -8px;
+    left: calc(50% - 8px);
+}
