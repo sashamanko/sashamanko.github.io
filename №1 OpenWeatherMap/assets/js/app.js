@@ -1,28 +1,29 @@
-document.addEventListener('DOMContentLoaded', () => {
-    navigator.geolocation.getCurrentPosition(position => {
-        lat = position.coords.latitude;
-        lon = position.coords.longitude;
-        alert(`${lat} ${lon}`)
+const searchInput = document.querySelector('.js--search-input');
 
-        init()
+let api;
+
+document.addEventListener('DOMContentLoaded', () => {
+    navigator.geolocation.getCurrentPosition(onSuccess, error => {
+        console.error(error);
     })
 })
 
-let lat = 0,
-    lon = 0;
+function onSuccess(position) {
+    const { latitude, longitude } = position.coords;
+
+    api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=f3a2fb24ec446e00dec092117e588fc5`;
+
+    init()
+}
 
 function init() {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=f3a2fb24ec446e00dec092117e588fc5`)
-        .then((resp) => { return resp.json() })
+    fetch(api)
+        .then((resp) => {
+            return resp.json();
+        })
         .then((data) => {
+
             console.log(data);
-            // imgBlock.innerHTML = `<img class='weather-img' src="http://openweathermap.org/img/w/` + data.weather[0].icon + `.png "></img>`
-
-            // tempBlock.textContent = `${temperature()}°`
-
-            // cityBlock.textContent = `City: ${data.name}`
-
-            console.log()
 
             function temperature() {
                 let getTemp = data.main.temp
@@ -32,9 +33,7 @@ function init() {
 
             let date = new Date;
 
-            // update_date.textContent = `Update time: ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
-
-            // console.log('перезапуск')
+            searchInput.placeholder = data.name;
         })
         // .catch(() => {
         //     alert('This city not found')

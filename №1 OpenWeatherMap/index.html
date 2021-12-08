@@ -8,10 +8,32 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="./assets/css/style.css">
+
 </head>
 
 <body>
+    <header class="header d-flex">
+        <div class="container">
+            <nav class="header__navbar ">
+                <ul class="header__navbar__list d-flex">
+                    <li class="header__navbar__list__item active">
+                        <p>Сегодня</p>
+                    </li>
+                    <li class="header__navbar__list__item">
+                        <p>За 5 дней</p>
+                    </li>
+                </ul>
+            </nav>
 
+            <div class="header__search d-flex">
+                <div>
+                    <input class="header__search__input js--search-input" type="text">
+                </div>
+                <button class="header__search__btn js--search-btn"></button>
+            </div>
+        </div>
+
+    </header>
 
     <script src="./assets/js/app.js"></script>
 </body>
