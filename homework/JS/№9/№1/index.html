@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./wrapped-ui.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            color: #fff;
+            font-family: sans-serif;
+            background: #1b1b1b;
+            min-height: 100vh;
+        }
+        
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            max-width: 1400px;
+            width: 100%;
+            height: 100vh;
+            margin: 0 auto;
+            padding: 0 12px;
+        }
+        
+        .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .form__title {
+            text-align: center;
+        }
+        
+        .form * {
+            margin-top: 7px;
+        }
+        
+        .message-list {
+            display: flex;
+            flex-direction: column;
+            margin-top: auto;
+        }
+        
+        .message-list__item {
+            position: relative;
+            width: 100%;
+            margin-top: 15px;
+            padding: 35px 7px 7px 7px;
+            background: #202020;
+            border-radius: 10px;
+            box-shadow: 0 0 3px #000000;
+        }
+        
+        .message-list__item__name,
+        .message-list__item__data {
+            position: absolute;
+            top: 0;
+            padding: 3px 7px;
+            background: #4f11ba;
+        }
+        
+        .message-list__item__name {
+            left: 0;
+            border-bottom-right-radius: 10px;
+            border-top-left-radius: 10px;
+            box-shadow: 1px 1px 3px #000000;
+        }
+        
+        .message-list__item__data {
+            right: 0;
+            font-weight: 600;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 10px;
+            box-shadow: -1px 1px 3px #000000;
+        }
+        
+        .message-list__item__text {
+            word-break: break-all;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="message-list js--message-list">
+
+        </div>
+
+        <form class="form js--form">
+            <p class="form__title">Добавить новое сообщение</p>
+
+            <input class="wrapped-ui" type="text" name="name" placeholder="Ваше имя" required>
+            <textarea class="wrapped-ui" name="message" placeholder="Ваше сообщение" required></textarea>
+
+            <button class="wrapped-ui" name="submit">Отправить</button>
+        </form>
+
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
