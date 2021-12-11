@@ -56,5 +56,5 @@ form.addEventListener('submit', e => {
 
     messageList.append(messageListItem);
 
-    form.remove()
+    form.reset()
 })
