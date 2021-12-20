@@ -1,0 +1,117 @@
+/* Golobal
+──────────────────────────────────────────────────────────── */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: #1b1b1b;
+  color: #ffffff;
+}
+
+body {
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+option:nth-child(1) { 
+  display: none; 
+}
+
+.container {
+  display: flex;
+  max-width: 1400px;
+  width: 1400px;
+  margin: 0 auto;
+}
+
+
+
+/* Header
+──────────────────────────────────────────────────────────── */
+
+.header {
+  padding: 12px 0;
+  background-color: #202020;
+  box-shadow: 0 0 7px 3px #00000095;
+}
+
+
+/* Main
+──────────────────────────────────────────────────────────── */
+
+.main {
+  width: 100%;
+}
+
+.color-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.color-list__item {
+  display: flex;
+  width: 220px;
+  height: 130px;
+  margin-top: 12px;
+  padding: 20px 40px;
+  background: red;
+  text-align: center;
+}
+
+.color-list__item:not(:last-child) {
+  margin-right: 12px;
+}
+
+.color-list__item__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 100%;
+  width: 100%;
+  padding: 7px 0;
+  background: #00000044;
+}
+
+/* Form
+──────────────────────────────────────────────────────────── */
+
+.form>:not(:first-child) {
+  width: 100%;
+  margin-top: 7px;
+}
+
+.form>:last-child {
+  margin-top: 15px;
+}
+
+
+/* Color-preview
+──────────────────────────────────────────────────────────── */
+
+.color-preview {
+  display: flex;
+  width: 80%;
+  height: 130px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  background: red;
+  text-align: center;
+}
+
+.color-preview__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 100%;
+  width: 100%;
+  padding: 7px 0;
+  background: #00000044;
+}

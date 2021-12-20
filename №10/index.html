@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- Google Fonts
+  ──────────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+
+  <!-- My libraries CSS
+  ──────────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="./assets/css/wrapped-ui.css">
+  <link rel="stylesheet" href="./assets/css/wrapped-modal-window.css">
+
+
+  <!-- My CSS
+  ──────────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+  <body>
+    
+
+    <!-- Header => Шапка
+    ──────────────────────────────────────────────────────────── -->
+    <header class="header">
+      <div class="container">
+        <button class="wrapped-ui" data-wrapped-modal=".modal-form">Add color</button>
+
+      </div>
+    </header>
+
+
+    <!-- Main => Контент сайта
+    ──────────────────────────────────────────────────────────── -->
+    <main class="main">
+      <div class="container">
+        <ul class="color-list js--color-list">
+          <li class="color-list__item">
+            <div class="color-list__item__info">
+              <h3 class="color-list__item__info__title">Color preview</h3>
+    
+              <p class="color-list__item__info__type">Color type</p>
+    
+              <p class="color-list__item__info__code">Color code</p>
+            </div>
+          </li>
+
+          <li class="color-list__item">
+            <div class="color-list__item__info">
+              <h3 class="color-list__item__info__title">Color preview</h3>
+    
+              <p class="color-list__item__info__type">Color type</p>
+    
+              <p class="color-list__item__info__code">Color code</p>
+            </div>
+          </li>
+
+          <li class="color-list__item">
+            <div class="color-list__item__info">
+              <h3 class="color-list__item__info__title">Color preview</h3>
+    
+              <p class="color-list__item__info__type">Color type</p>
+    
+              <p class="color-list__item__info__code">Color code</p>
+            </div>
+          </li>
+
+          <li class="color-list__item">
+            <div class="color-list__item__info">
+              <h3 class="color-list__item__info__title">Color preview</h3>
+    
+              <p class="color-list__item__info__type">Color type</p>
+    
+              <p class="color-list__item__info__code">Color code</p>
+            </div>
+          </li>
+
+          <li class="color-list__item">
+            <div class="color-list__item__info">
+              <h3 class="color-list__item__info__title">Color preview</h3>
+    
+              <p class="color-list__item__info__type">Color type</p>
+    
+              <p class="color-list__item__info__code">Color code</p>
+            </div>
+          </li>
+
+          <li class="color-list__item">
+            <div class="color-list__item__info">
+              <h3 class="color-list__item__info__title">Color preview</h3>
+    
+              <p class="color-list__item__info__type">Color type</p>
+    
+              <p class="color-list__item__info__code">Color code</p>
+            </div>
+          </li>
+
+          <li class="color-list__item">
+            <div class="color-list__item__info">
+              <h3 class="color-list__item__info__title">Color preview</h3>
+    
+              <p class="color-list__item__info__type">Color type</p>
+    
+              <p class="color-list__item__info__code">Color code</p>
+            </div>
+          </li>
+
+          <li class="color-list__item">
+            <div class="color-list__item__info">
+              <h3 class="color-list__item__info__title">Color preview</h3>
+    
+              <p class="color-list__item__info__type">Color type</p>
+    
+              <p class="color-list__item__info__code">Color code</p>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </main>
+
+
+    <!-- Modal window
+    ──────────────────────────────────────────────────────────── -->
+    <modal-window class="modal-form">
+      <title>Add color</title>
+
+      <form class="form js--form">
+        <div>
+          <input class="wrapped-ui" type="text" placeholder="Color name">
+
+          <select class="wrapped-ui" name="type">
+            <option selected>Color type</option>
+            <option value="hex">HEX</option>
+            <option value="rgb">RGB</option>
+            <option value="rgba">RGBA</option>
+          </select>
+        </div>
+
+        <input class="wrapped-ui" type="text" placeholder="Color code">
+
+        <button class="wrapped-ui" type="submit">Save</button>
+      </form>
+
+      <hr>
+
+      <div class="color-preview js--color-preview">
+        <div class="color-preview__info">
+          <h3 class="js--color-name">Color preview</h3>
+
+          <p class="js--color-type">Color type</p>
+
+          <p class="js--color-code">Color code</p>
+        </div>
+      </div>
+
+    </modal-window>
+
+
+    <!-- My libraries JS
+    ──────────────────────────────────────────────────────────── -->
+    <script src="./assets/js/wrapped-modal-window.js"></script>
+
+    
+    <!-- My JS
+    ──────────────────────────────────────────────────────────── -->
+    <script src="./assets/js/app.js"></script>
+  </body>
+
+</html>
