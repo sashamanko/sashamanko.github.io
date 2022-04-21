@@ -1,8 +1,8 @@
 // Imports
 // __________________________________________________
 import them from "./components/them.js";
-import popularCurrencies from "./components/popularCurrencies.js";
 import seachCarrencies from "./components/seachCarrencies.js";
+import { dateElement } from "./components/elements.js";
 
 // DOM content loaded
 // __________________________________________________
@@ -13,9 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Functions 
   // __________________________________________________
-
   them()
-  popularCurrencies()
   seachCarrencies()
+
+  // Тимчасово
+  document.querySelector('.footer__container').append(dateElement())
   
 });

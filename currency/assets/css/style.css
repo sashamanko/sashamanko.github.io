@@ -41,10 +41,6 @@ html {
   transition: background-color .3s;
 }
 
-body {
-
-}
-
 ul {
   list-style: none;
 	margin-left: 0;
@@ -95,10 +91,11 @@ __________________________________________________ */
 }
 
 .header__container {
-  min-width: 1400px;
-  height: 70px;
   align-items: center;
   justify-content: space-between;
+  max-width: 1400px;
+  width: 100%;
+  height: 70px;
 }
 
 .header__them-btn {
@@ -114,53 +111,12 @@ __________________________________________________ */
 /* Main
 __________________________________________________ */
 
-/* Section | Popular currencies
-__________________________________________________ */
-
-.popular-currencies {
-  padding: 20px 0px 20px 0px;
-}
-
-.popular-currencies__list {
-  align-items: center;
-  justify-content: space-between;
-}
-
-.popular-currencies__item {
-  align-items: center;
-  min-width: 180px;
-  padding: 12px;
-  background: var(--background-2);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-}
-
-.popular-currencies__item__title {
-  margin-right: 30px;
-}
-
-.popular-currencies__item__currency-block {
-  position: relative;
-}
-
-.popular-currencies__item__currency-block::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -10px;
-  width: 2px;
-  height: 100%;
-  background: var(--color-accent);
-  border-radius: 2px;
-}
-
-.popular-currencies__item__buy,
-.popular-currencies__item__sale {
-  font-weight: 500;
-}
-
 /* Currencies
 __________________________________________________ */
+
+.currencies {
+  padding: 12px 0;
+}
 
 .currencies__container {
   justify-content: space-between;
@@ -242,4 +198,28 @@ __________________________________________________ */
 
 .currencies__search__item__currensy-text__sale {
   position: relative;
+}
+
+/* Footer
+__________________________________________________ */
+
+.footer {
+  background: var(--background-2);
+}
+
+.footer__container {
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+
+/* Media
+__________________________________________________ */
+
+@media screen and (max-width: 1400px) {
+  .container,
+  .header__container {
+    padding: 0 12px;
+
+  }
 }

@@ -16,59 +16,6 @@ export const dateElement = () => {
     })
   }
 
-// Popular currencies item
-export const popularCurrenciesItem = (item) => {
-
-  const title = newElements({
-    tag: 'h4',
-    textContent: item.ccy,
-    classList: {
-      0: 'popular-currencies__item__title',
-    },
-  })
-
-  const buy = newElements({
-    tag: 'p',
-    textContent: parseFloat(item.buy).toFixed(2),
-    classList: {
-      0: 'popular-currencies__item__buy',
-    }
-  })
-
-  const sale = newElements({
-    tag: 'p',
-    textContent: parseFloat(item.sale).toFixed(2),
-    classList: {
-      0: 'popular-currencies__item__sale',
-    }
-  })
-
-  const currencyBlock = newElements({
-    tag: 'div',
-    classList: {
-      0: 'popular-currencies__item__currency-block',
-    },
-    childNodes: {
-      0: buy,
-      1: sale,
-    }
-  })
-
-  return newElements({
-    tag: 'li',
-    classList: {
-      0: 'popular-currencies__item',
-      1: 'd-flex'
-    },
-    parentNode: '.js--popular-currencies-list',
-    childNodes: {
-      0: title,
-      1: currencyBlock,
-    }
-  })
-
-}
-
 // Search currencies item
 export const searchCurrenciesItem = (item) => {
 

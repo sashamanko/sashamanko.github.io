@@ -1,15 +1,13 @@
 // Imports
 // __________________________________________________
 import ajax from "./ajax.js";
-import newElements from "./domBuiler.js";
-import { popularCurrenciesItem, searchCurrenciesItem } from "./elements.js";
-
+import { searchCurrenciesItem } from "./elements.js";
 
 // Seach carrencies
 // __________________________________________________
 const seachCarrencies = () => {
   // Variables
-  const p24apiData = ajax(`https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=12`);
+  const p24apiData = ajax(`https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11`);
   const input = document.querySelector('.js--input');
 
   input.addEventListener('input', e => {
