@@ -1,0 +1,122 @@
+
+
+/* Main
+__________________________________________________ */
+
+/* Currencies
+__________________________________________________ */
+
+.currencies {
+  padding: 12px 0;
+}
+
+.currencies__container {
+  justify-content: space-between;
+}
+
+.currencies__search,
+.currencies__converter {
+  min-width: 30%;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.currencies__search__header {
+  padding: 12px;
+  background: var(--background-2);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.currencies__search__title {
+  font-weight: 600;
+}
+
+.currencies__search__input {
+  max-width: 165px;
+  margin-left: auto;
+  padding: 0 7px;
+  color: var(--color);
+  font-size: 1rem;
+  background: var(--background-2);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  outline: none;
+}
+
+.currencies__search__lsit {
+  height: calc(100vh - 220px);
+  overflow-y: auto;
+}
+
+.currencies__search__list-title {
+  justify-content: space-between;
+  font-size: .888rem;
+}
+
+.currencies__search__list-title > span:first-child {
+  flex-basis: 37%;
+}
+
+.currencies__search__list-title > span:last-child {
+  position: relative;
+}
+
+.currencies__search__list-title > span:last-child::before,
+.currencies__search__item__currensy-text__sale::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 87px;
+  width: 1px;
+  height: 100%;
+  background: var(--color);
+  opacity: .5;
+}
+
+.currencies__search__item {
+  justify-content: space-between;
+  margin-top: 12px;
+  padding: 12px;
+  background: var(--background-2);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+.currencies__search__item__currensy-title {
+  flex-basis: 38%;
+  align-items: center;
+}
+
+.currencies__search__item__currensy-title__arrows {
+  margin: 0 7px;
+  font-size: .777rem;
+}
+
+.currencies__search__item__currensy-text__sale {
+  position: relative;
+}
+
+/* Footer
+__________________________________________________ */
+
+.footer {
+  background: var(--background-2);
+}
+
+.footer__container {
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+
+/* Media
+__________________________________________________ */
+
+@media screen and (max-width: 1400px) {
+  .container,
+  .header__container {
+    padding: 0 12px;
+
+  }
+}
