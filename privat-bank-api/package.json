@@ -4,11 +4,11 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "npm start"
+    "test": ""
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sashamanko/sashamanko.github.io/privat-bank-api"
+    "url": "https://github.com/sashamanko/sashamanko.github.io/privat-bank-api.git"
   },
   "keywords": [
     "api"

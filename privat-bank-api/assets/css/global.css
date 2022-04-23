@@ -39,6 +39,7 @@ html {
   font-size: var(--font-size);
   background: var(--background-1);
   transition: background-color .3s;
+  line-height: 1;
 }
 
 body {
@@ -66,7 +67,6 @@ button {
 
 h1 {
   font-size: 1.666rem;
-  line-height: 1;
 }
 
 h2 {
@@ -111,17 +111,18 @@ __________________________________________________ */
   height: 70px;
 }
 
-.header__title {
+.header__logo {
+  flex-direction: column;
+}
+
+.header__logo__title {
   position: relative;
   font-weight: 600;
 }
 
-.header__title__link {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+.header__logo__link {
   font-size: .666rem;
-  transform: translate(0, 100%);
+  text-align: end;
 }
 
 .header__them-btn {
