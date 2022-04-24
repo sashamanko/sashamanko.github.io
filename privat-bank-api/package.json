@@ -12,6 +12,6 @@
   "author": "Sasha Manko",
   "dependencies": {
     "axios": "^0.26.1",
-    "wrapped-localstorage": "^1.0.45"
+    "wrapped-localstorage": "^1.0.46"
   }
 }
