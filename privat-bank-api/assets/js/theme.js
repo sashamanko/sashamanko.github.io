@@ -7,8 +7,9 @@ const theme = () => {
   const themBtn = document.querySelector('.js--them-btn');
   const htmlDataset = document.documentElement.dataset;
 
-  if (htmlDataset.theme == 'dark') {
+  if (htmlDataset.theme === 'dark') {
     themBtn.classList.toggle('ri-moon-line');
+  } else {
     themBtn.classList.toggle('ri-sun-line');
   }
 
