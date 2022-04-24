@@ -1,6 +1,7 @@
 {
   "name": "privat-bank-api",
   "version": "0.0.1",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": ""
@@ -8,20 +9,9 @@
   "keywords": [
     "api"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sashamanko/wrapped-localstorage.git"
-  },
   "author": "Sasha Manko",
   "dependencies": {
     "axios": "^0.26.1",
     "wrapped-localstorage": "^1.0.45"
-  },
-  "bugs": {
-    "url": "https://github.com/sashamanko/wrapped-localstorage/issues"
-  },
-  "homepage": "https://github.com/sashamanko/wrapped-localstorage#readme",
-  "devDependencies": {},
-  "license": "ISC",
-  "description": ""
+  }
 }
