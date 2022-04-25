@@ -89,6 +89,11 @@ hr {
   border-radius: 2px;
 }
 
+mark {
+  color: var(--color-accent);
+  background: transparent;
+}
+
 /* Class
 __________________________________________________ */
 
@@ -255,7 +260,8 @@ __________________________________________________ */
 
 .hero__users {
   margin-left: auto;
-  width: 350px;
+  width: 300px;
+  font-size: .888rem;
 }
 
 .hero__users__body {
