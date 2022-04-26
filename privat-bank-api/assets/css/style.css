@@ -26,6 +26,7 @@ __________________________________________________ */
   --box-shadow: 0 2px 5px 1px #00000035;
 }
 
+
 /* Tags
 __________________________________________________ */
 
@@ -33,6 +34,10 @@ __________________________________________________ */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+[data-visibility='false'] {
+  visibility: hidden;
 }
 
 html {
@@ -115,6 +120,24 @@ __________________________________________________ */
   overflow: hidden;
 }
 
+.couters {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.copy-btn {
+  margin-left: auto;
+  color: var(--color);
+  font-size: 1.4444rem;
+  padding: var(--padding);
+  box-shadow: var(--box-shadow);
+  transition: all .3s;
+}
+
+.copy-btn:hover {
+  color: var(--color-accent);
+}
+
 /* Header
 __________________________________________________ */
 
@@ -175,7 +198,10 @@ __________________________________________________ */
 
 .hero__json,
 .hero__options,
-.hero__users {
+.hero__users__top,
+.hero__users__bottom,
+.hero__bottom {
+  height: auto;
   margin-right: var(--margin);
   padding: 0;
   line-height: 1.5;
@@ -219,10 +245,6 @@ __________________________________________________ */
 }
 
 /* Hero options */
-
-.hero__options {
-  width: 400px;
-}
 
 .hero__options__body {
   padding: 5px var(--padding);
@@ -268,12 +290,25 @@ __________________________________________________ */
   padding: 5px var(--padding);
 }
 
+.hero__users__bottom {
+  margin-top: var(--margin);
+}
+
+.hero__users__body__couter-list__item {
+  display: flex;
+  justify-content: space-between;
+}
+
 /* Hero bottom */
 
 .hero__bottom {
   align-items: center;
   width: 100%;
   margin-top: var(--margin);
+}
+
+.hero__bottom__text {
+  padding: var(--padding) 0 var(--padding) var(--padding);
 }
 
 .hero__bottom__title {
@@ -306,6 +341,5 @@ __________________________________________________ */
   .container,
   .header__container {
     padding: 0 var(--padding);
-
   }
 }

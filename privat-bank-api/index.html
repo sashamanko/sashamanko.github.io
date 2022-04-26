@@ -109,7 +109,7 @@
                   <li class="hero__options__search-bank__item">
                     <label class="hero__options__search-bank__label">
                       <input class="hero__options__search-bank__input js--bank-radio" type='radio' name="bank" value="PB">
-                      Приват банк
+                      ПриватБанк
                     </label>
                   </li>
                 </ul>
@@ -120,26 +120,50 @@
 
           </div>
 
-          <div class="hero__users block">
-            <h3 class="hero__users__title">Користувачам</h3>
+          <div class="hero__users">
 
-            <div class="hero__users__body">
-              <h3>Параметри запиту</h3>
-              <p><mark>date</mark> - отримання інформації на обрану дату.</p>
-              <p><mark>bank</mark> - отримання інфотмації тілки ПриватБанку або НБУ</p>
+            <div class="hero__users__top block">
+              
+              <h3 class="hero__users__title">Користувачам</h3>
+              
+              <div class="hero__users__body">
+                <h3>Параметри запиту</h3>
+                <p><mark>date</mark> - отримання інформації на обрану дату.</p>
+                <p><mark>bank</mark> - отримання інфотмації тілки ПриватБанку або НБУ</p>
+              </div>
+              
             </div>
+            
+            <div class="hero__users__bottom js--couters-block block" data-visibility="false">
+
+              <h3 class="hero__users__title">GET заптів</h3>
+
+              <div class="hero__users__body">
+                <ul>
+                  <li class="hero__users__body__couter-list__item">Всього : <span class="couters js--counter-all"></span></li>
+                  <li class="hero__users__body__couter-list__item">НБУ : <span class="couters js--counter-pb"></span></li>
+                  <li class="hero__users__body__couter-list__item">ПриватБанк : <span class="couters js--counter-nb"></span></li>
+                </ul>
+              </div>
+
+            </div>
+
           </div>
 
-      </div>
+        </div>
         
         <!-- Hero bottom -->
         <div class="hero__bottom block d-flex">
-          <h3 class="hero__bottom__title">
-            API link
-          </h3>
-          <p class="hero__bottom__link">
-            https://privat24-api.herokuapp.com/<mark>?<span class="js--bank"></span>date=<span class="js--date"></span></mark>
-          </p>
+          <div class="hero__bottom__text d-flex">
+            <h3 class="hero__bottom__title">
+              API link
+            </h3>
+            <p class="hero__bottom__link">
+              https://privat24-api.herokuapp.com/<mark>?<span class="js--bank"></span>date=<span class="js--date"></span></mark>
+            </p>
+          </div>
+
+          <button class="copy-btn ri-file-copy-line js--copy-btn" title="Копіювати"></button>
         </div>
 
       </div>
