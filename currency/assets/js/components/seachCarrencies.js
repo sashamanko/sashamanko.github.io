@@ -11,8 +11,8 @@ const currenciesList = document.querySelector('.js--currencies-search-list');
 // API
 const apiLink = 'https://privat24-api.herokuapp.com/';
 const apiParams = {
-  date: '27.04.2022',
-  // date: moment().locale('uk').format('L'),
+  // date: '27.04.2022',
+  date: moment().locale('uk').format('L'),
   bank: '',
   searchStr: '',
 };
