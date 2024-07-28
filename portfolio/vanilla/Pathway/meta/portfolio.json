@@ -1,6 +1,7 @@
 {
   "projectName": "Pathway",
   "description": "\"Pathway\" is a simple landing page for a travel agency",
+  "category": "vanila",
   "tags": [
     "HTML",
     "SCSS",
